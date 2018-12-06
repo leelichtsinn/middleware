@@ -8,7 +8,7 @@ const supplierRouter = require('./routers/supplier_router.js');
 const itemRouter = require('./routers/item_router.js');
 
 const server = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // middleware
 server.use(express.json());
