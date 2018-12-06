@@ -19,5 +19,9 @@ server.use(logger('dev'));
 server.use('/api/suppliers', supplierRouter);
 server.use('/api/items', itemRouter);
 
+server.get('/', (req, res) => {
+  res.send('we are live');
+});
+
 // listen
 server.listen(PORT, () => console.log(`server is running on port ${PORT}`));
